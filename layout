@@ -1,0 +1,45 @@
+parts {#displaysize
+    device {
+        display {
+         width 1048
+        height 2248
+            x 0
+            y 0
+	corner_radius 509
+        }
+    }
+ #EDIT HERE  (Change color)
+    portrait {
+        background {
+            image yellow.png  
+        }
+        foreground {
+            mask notch.png
+cutout hole
+        }
+        
+    }
+}
+
+layouts {#backgrooundsize
+    portrait {
+        width 1170
+        height 2570
+        color 0x00000000
+        event EV_SW:0:1
+        part1 {
+            name portrait
+            x 0
+            y 0
+        }
+        part2 {
+            name device
+            x 60
+            y 60
+        }
+
+    }
+network {
+      speed full
+      delay none
+}
